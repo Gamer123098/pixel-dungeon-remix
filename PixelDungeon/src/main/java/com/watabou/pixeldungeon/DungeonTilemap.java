@@ -29,7 +29,7 @@ import com.watabou.utils.PointF;
 
 public abstract class DungeonTilemap extends Tilemap {
 
-	public static final int SIZE = 32;
+	public static final int SIZE = 16;
 	
 	static protected Level level;
 
