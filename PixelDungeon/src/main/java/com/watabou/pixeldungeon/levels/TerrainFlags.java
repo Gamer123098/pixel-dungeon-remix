@@ -21,10 +21,10 @@ public class TerrainFlags {
 	}
 
 	static {
-		flags[Terrain.CHASM] = AVOID | PIT | UNSTITCHABLE;
+		flags[Terrain.CHASM] = PASSABLE;
 		flags[Terrain.EMPTY] = PASSABLE;
 		flags[Terrain.GRASS] = PASSABLE | FLAMABLE;
-		flags[Terrain.EMPTY_WELL] = PASSABLE;
+		flags[Terrain.EMPTY_WELL] = PASSABLE | LIQUID;
 		flags[Terrain.WATER] = PASSABLE | LIQUID | UNSTITCHABLE;
 		flags[Terrain.WALL] = LOS_BLOCKING | SOLID | UNSTITCHABLE;
 		flags[Terrain.DOOR] = PASSABLE | LOS_BLOCKING | FLAMABLE | SOLID | UNSTITCHABLE;
@@ -54,22 +54,22 @@ public class TerrainFlags {
 		flags[Terrain.CHASM_WATER] = flags[Terrain.CHASM];
 
 		flags[Terrain.SECRET_DOOR] = flags[Terrain.WALL] | SECRET | UNSTITCHABLE;
-		flags[Terrain.TOXIC_TRAP] = AVOID | TRAP;
-		flags[Terrain.SECRET_TOXIC_TRAP] = flags[Terrain.EMPTY] | SECRET | TRAP;
-		flags[Terrain.FIRE_TRAP] = AVOID | TRAP;
-		flags[Terrain.SECRET_FIRE_TRAP] = flags[Terrain.EMPTY] | SECRET | TRAP;
-		flags[Terrain.PARALYTIC_TRAP] = AVOID | TRAP;
-		flags[Terrain.SECRET_PARALYTIC_TRAP] = flags[Terrain.EMPTY] | SECRET | TRAP;
-		flags[Terrain.POISON_TRAP] = AVOID | TRAP;
-		flags[Terrain.SECRET_POISON_TRAP] = flags[Terrain.EMPTY] | SECRET | TRAP;
-		flags[Terrain.ALARM_TRAP] = AVOID | TRAP;
-		flags[Terrain.SECRET_ALARM_TRAP] = flags[Terrain.EMPTY] | SECRET | TRAP;
-		flags[Terrain.LIGHTNING_TRAP] = AVOID | TRAP;
-		flags[Terrain.SECRET_LIGHTNING_TRAP] = flags[Terrain.EMPTY] | SECRET | TRAP;
-		flags[Terrain.GRIPPING_TRAP] = AVOID | TRAP;
-		flags[Terrain.SECRET_GRIPPING_TRAP] = flags[Terrain.EMPTY] | SECRET | TRAP;
-		flags[Terrain.SUMMONING_TRAP] = AVOID | TRAP;
-		flags[Terrain.SECRET_SUMMONING_TRAP] = flags[Terrain.EMPTY] | SECRET | TRAP;
+		flags[Terrain.TOXIC_TRAP] = AVOID;
+		flags[Terrain.SECRET_TOXIC_TRAP] = flags[Terrain.EMPTY] | SECRET;
+		flags[Terrain.FIRE_TRAP] = AVOID;
+		flags[Terrain.SECRET_FIRE_TRAP] = flags[Terrain.EMPTY] | SECRET;
+		flags[Terrain.PARALYTIC_TRAP] = AVOID;
+		flags[Terrain.SECRET_PARALYTIC_TRAP] = flags[Terrain.EMPTY] | SECRET;
+		flags[Terrain.POISON_TRAP] = AVOID;
+		flags[Terrain.SECRET_POISON_TRAP] = flags[Terrain.EMPTY] | SECRET;
+		flags[Terrain.ALARM_TRAP] = AVOID;
+		flags[Terrain.SECRET_ALARM_TRAP] = flags[Terrain.EMPTY] | SECRET;
+		flags[Terrain.LIGHTNING_TRAP] = AVOID;
+		flags[Terrain.SECRET_LIGHTNING_TRAP] = flags[Terrain.EMPTY] | SECRET;
+		flags[Terrain.GRIPPING_TRAP] = AVOID;
+		flags[Terrain.SECRET_GRIPPING_TRAP] = flags[Terrain.EMPTY] | SECRET;
+		flags[Terrain.SUMMONING_TRAP] = AVOID;
+		flags[Terrain.SECRET_SUMMONING_TRAP] = flags[Terrain.EMPTY] | SECRET;
 		flags[Terrain.INACTIVE_TRAP] = flags[Terrain.EMPTY];
 
 		for (int i = Terrain.WATER_TILES; i < Terrain.WATER_TILES + 16; i++) {
